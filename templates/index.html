@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content ="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+  
+  <title>QR CODE GENERATOR</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" />
+</head>
+<body >
+    <div class="full">
+    <div class="title"> 
+        <h1> QR CODE GENERATOR</h1>
+        <h2>Insert a link below to generate a QR Code</h2>
+    </div>
+    <form action="/" method = 'POST'>
+        <input type="text" name="link">
+        <button type="submit">Generate QR</button>
+        <div class = "generated">
+            <img src="{{data}}" alt="">
+           
+        </div>
+    
+    </form>
+    </div>
+
+    
+  
+</body>
+
+
+</html>
